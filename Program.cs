@@ -111,7 +111,7 @@ class Program
 
     static void calculateTax(char civilStatus, double annualPay)
     {
-        double taxToWithold = 0.0;
+        double taxToWithhold = 0.0;
         double taxExcessPercent = 0.0;
         double taxPayable = 0.0;
         double taxThreshold = 0.0;
@@ -130,37 +130,37 @@ class Program
                 }
                 else if (annualPay < 8800.0)
                 {
-                    taxToWithold = 5.0;
+                    taxToWithhold = 5.0;
                     taxExcessPercent = 0.01;
                     taxThreshold = 7300.0;
                 }
                 else if (annualPay < 10050.0)
                 {
-                    taxToWithold = 20.0;
+                    taxToWithhold = 20.0;
                     taxExcessPercent = 0.02;
                     taxThreshold = 8800.0;
                 }
                 else if (annualPay < 11200.0)
                 {
-                    taxToWithold = 45.0;
+                    taxToWithhold = 45.0;
                     taxExcessPercent = 0.03;
                     taxThreshold = 10050.0;
                 }
                 else if (annualPay < 13500.0)
                 {
-                    taxToWithold = 79.50;
+                    taxToWithhold = 79.50;
                     taxExcessPercent = 0.04;
                     taxThreshold = 11200.0;
                 }
                 else if (annualPay < 15000.0)
                 {
-                    taxToWithold = 171.50;
+                    taxToWithhold = 171.50;
                     taxExcessPercent = 0.05;
                     taxThreshold = 13500.0;
                 }
                 else
                 {
-                    taxToWithold = 246.50;
+                    taxToWithhold = 246.50;
                     taxExcessPercent = 0.0525;
                     taxThreshold = 15000.0;
                 }
@@ -177,37 +177,37 @@ class Program
                 }
                 else if (annualPay < 17600.0)
                 {
-                    taxToWithold = 10.0;
+                    taxToWithhold = 10.0;
                     taxExcessPercent = 0.01;
                     taxThreshold = 14600.0;
                 }
                 else if (annualPay < 20100.0)
                 {
-                    taxToWithold = 40.0;
+                    taxToWithhold = 40.0;
                     taxExcessPercent = 0.02;
                     taxThreshold = 17600.0;
                 }
                 else if (annualPay < 22400.0)
                 {
-                    taxToWithold = 90.0;
+                    taxToWithhold = 90.0;
                     taxExcessPercent = 0.03;
                     taxThreshold = 20100.0;
                 }
                 else if (annualPay < 24800.0)
                 {
-                    taxToWithold = 159.00;
+                    taxToWithhold = 159.00;
                     taxExcessPercent = 0.04;
                     taxThreshold = 22400.0;
                 }
                 else if (annualPay < 27600.0)
                 {
-                    taxToWithold = 255.00;
+                    taxToWithhold = 255.00;
                     taxExcessPercent = 0.05;
                     taxThreshold = 24800.0;
                 }
                 else
                 {
-                    taxToWithold = 395.00;
+                    taxToWithhold = 395.00;
                     taxExcessPercent = 0.0525;
                     taxThreshold = 27600.0;
                 }
@@ -217,7 +217,7 @@ class Program
                 return;
         }
 
-        taxPayable = taxToWithold + (annualPay - taxThreshold) * taxExcessPercent;
+        taxPayable = taxToWithhold + (annualPay - taxThreshold) * taxExcessPercent;
 
         double takeHomePay = annualPay - taxPayable;
 
@@ -226,14 +226,14 @@ class Program
         Console.WriteLine("Take Home Pay: {0:C2}", takeHomePay);
         Console.WriteLine("\nComputation for tax payable:\n");
 
-        Console.WriteLine("{0:N2} + ({1:N2} - {2:N2}) * {3:N2} = {4:N2}", taxToWithold, annualPay, taxThreshold, taxExcessPercent, taxPayable);
+        Console.WriteLine("{0:N2} + ({1:N2} - {2:N2}) * {3:N2} = {4:N2}", taxToWithhold, annualPay, taxThreshold, taxExcessPercent, taxPayable);
     }
 
     static void displayTable()
     {
         Console.WriteLine("A: SINGLE Person:");
-        Console.WriteLine("If the amount of wages is: (after subtracting witholding allowances)\n");
-        Console.WriteLine("| Over    | but less than | The amount income tax to withold is:        |");
+        Console.WriteLine("If the amount of wages is: (after subtracting withholding allowances)\n");
+        Console.WriteLine("| Over    | but less than | The amount income tax to withhold is:        |");
         Console.WriteLine("| ------- | ------------- | ------------------------------------------- |");
         Console.WriteLine("| $0      | $6,300        | $0                                          |");
         Console.WriteLine("| $6,300  | $7,300        | $0 +(0.50% of the excess over $6,300)       |");
@@ -245,8 +245,8 @@ class Program
         Console.WriteLine("| $15,000 | and above     | $246.50 +(5.25% of the excess over $15,000) |\n\n");
 
         Console.WriteLine("B: MARRIED Person:");
-        Console.WriteLine("If the amount of wages is: (after subtracting witholding allowances)\n");
-        Console.WriteLine("| Over    | but less than | The amount income tax to withold is:        |");
+        Console.WriteLine("If the amount of wages is: (after subtracting withholding allowances)\n");
+        Console.WriteLine("| Over    | but less than | The amount income tax to withhold is:        |");
         Console.WriteLine("| ------- | ------------- | ------------------------------------------- |");
         Console.WriteLine("| $0      | $12,600       | $0                                          |");
         Console.WriteLine("| $12,600 | $14,600       | $0 +(0.50% of the excess over $12,600)      |");
