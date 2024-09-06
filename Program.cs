@@ -244,7 +244,7 @@ class Program
         Console.WriteLine("| $13,500 | $15,000       | $171.50 +(5.00% of the excess over $13,500) |");
         Console.WriteLine("| $15,000 | and above     | $246.50 +(5.25% of the excess over $15,000) |\n\n");
 
-        Console.WriteLine("B: SINGLE Person:");
+        Console.WriteLine("B: MARRIED Person:");
         Console.WriteLine("If the amount of wages is: (after subtracting witholding allowances)\n");
         Console.WriteLine("| Over    | but less than | The amount income tax to withold is:        |");
         Console.WriteLine("| ------- | ------------- | ------------------------------------------- |");
